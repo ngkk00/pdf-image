@@ -1,38 +1,107 @@
-.App {
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
   text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+  /* Soft gradient background */
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Headings */
+h1 {
+  color: #333;
+  margin-top: 30px;
+}
+
+/* Stylish PDF choose button */
+.file-btn {
+  display: inline-block;
+  padding: 14px 28px;
+  margin: 10px 0;
+  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* bright gradient */
   color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+.file-btn:hover {
+  background: linear-gradient(45deg, #ff6a3d, #ffb870);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* General Button Style */
+button,
+a.download-btn {
+  display: inline-block;
+  padding: 12px 25px;
+  margin: 8px 0;
+  background: linear-gradient(45deg, #007bff, #00a1ff);
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+}
+
+button:hover,
+a.download-btn:hover {
+  background: linear-gradient(45deg, #0056b3, #0081cc);
+  transform: translateY(-3px) scale(1.03);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Image Styling */
+img {
+  max-width: 90%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for Each Page */
+.page-container {
+  margin-bottom: 30px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 12px;
+  color: #555;
+  line-height: 1.5;
+  text-wrap: set;
+  word-wrap: break-word;
+  max-width: 60%;
+  margin: 0 auto;
 }
